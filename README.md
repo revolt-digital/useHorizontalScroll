@@ -2,13 +2,21 @@
 
 A package to easily create horizontal scrolling on flex elements.
 
-## Usate
+## Todo
+
+- [] Options props to enable drag on desktop.
+- [] Option prop to rewrite children width in mobile.
+- [] Tests
+- [] Instead of adding a `flex-none` children box, it will be built out of the box.
+- [] Instead of adding `flex` and `overflow-x-hidden | scroll` it will be built out of the box (scroll type will be selected in options props)
+
+## Usage
 
 - Install the package
 
 ```bash
   npm install @revolt-digital/use-horizontal-scroll
-
+  # or
   yarn add @revolt-digital/use-horizontal-scroll
 ```
 
