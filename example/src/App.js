@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { useState } from "react";
-import useHorizontalScroll from "./hooks/useHorizontalScroll";
+import useHorizontalScroll from "@revolt-digital/use-horizontal-scroll";
 
 const images = [
   "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80",

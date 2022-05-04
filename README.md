@@ -6,7 +6,7 @@ A package to easily create horizontal scrolling on flex elements.
 
 - Install the package
 
-```
+```bash
   npm install @revolt-digital/use-horizontal-scroll
 
   yarn add @revolt-digital/use-horizontal-scroll
@@ -55,3 +55,11 @@ export default () => {
   );
 }
 ```
+
+## Running the example app
+
+Run `yarn install` then `yarn build` in the root folder (the one with this README file).
+
+Then move into the example folder `cd example` and run `yarn install` and `yarn start`.
+
+Then go to `http://localhost:3000`
