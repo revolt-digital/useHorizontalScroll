@@ -5,10 +5,10 @@ A package to easily create horizontal scrolling on flex elements.
 ## Todo
 
 - [] Options props to enable drag on desktop.
-- [] Option prop to rewrite children width in mobile.
+- [X] Option prop to rewrite children width in mobile.
 - [] Tests
-- [] Instead of adding a `flex-none` children box, it will be built out of the box.
-- [] Instead of adding `flex` and `overflow-x-hidden | scroll` it will be built out of the box (scroll type will be selected in options props)
+- [X] Instead of adding a `flex-none` children box, it will be built out of the box.
+- [X] Instead of adding `flex` and `overflow-x-hidden | scroll` it will be built out of the box (scroll type will be selected in options props)
 
 ## Usage
 
