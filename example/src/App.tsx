@@ -1,5 +1,3 @@
-import classNames from "classnames";
-import { useState } from "react";
 import useHorizontalScroll from "@revolt-digital/use-horizontal-scroll";
 
 const images = [
@@ -12,51 +10,30 @@ const images = [
 ];
 
 function App() {
-  const [isOverlowHidden, setOverflowHidden] = useState(false);
   const { ref } = useHorizontalScroll();
 
-  const handleOverflowHidden = () => {
-    setOverflowHidden((prev) => !prev);
-  };
-
-  const renderImagesMap = () => {
-    return images.map((person, index) => {
-      return (
-        <div key={index} className="flex-none">
-          <div className="flex flex-col items-center gap-3 border p-4">
-            <img className="w-80 h-80 rounded-full object-cover" src={person} />
-            <strong className="text-black text-2xl font-medium">
-              User {index}
-            </strong>
-          </div>
-        </div>
-      );
-    });
-  };
-
-  const scrollTypeCSS = classNames("flex gap-3O", {
-    "overflow-x-scroll": !isOverlowHidden,
-    "overflow-x-hidden": isOverlowHidden,
-  });
-
   return (
-    <div className="container mx-auto space-y-3 px-4 my-20">
+    <div className="container mx-auto space-y-10 px-4 my-20">
       <div className="max-w-md space-y-3 text-center mx-auto">
         <h1 className="text-4xl">useHorizontalScroll</h1>
-        <p className="text-sm text-gray-800 bg-gray-100 p-4">
-          You can change to the parent <i>overflow-x: hidden</i> instead of{" "}
-          <i>scroll</i> to make it like a carousel.
-        </p>
-        <button
-          type="button"
-          className="text-sm text-gray-800 bg-gray-100 p-4 font-bold"
-          onClick={handleOverflowHidden}
-        >
-          Click here to toggle overflow-x: hidden/scroll
-        </button>
       </div>
-      <main className={scrollTypeCSS} ref={ref}>
-        {renderImagesMap()}
+      <main ref={ref}>
+        {images.map((person, index) => {
+          return (
+            <article
+              className="flex flex-col items-center gap-3 border p-4"
+              key={index}
+            >
+              <img
+                className="w-80 h-80 rounded-full object-cover"
+                src={person}
+              />
+              <strong className="text-black text-2xl font-medium">
+                User {index}
+              </strong>
+            </article>
+          );
+        })}
       </main>
     </div>
   );
