@@ -22,25 +22,22 @@ A package to easily create horizontal scrolling on flex elements.
 
 - Step 1, create a layout that you want to make scrolleable
 
-
 ```html
-<section className="flex overflow-x-hidden">
-  <div className="flex-none">
+<section>
+  <article>
     ...
-  </div>
-  <div className="flex-none">
+  </article>
+  <article>
     ...
-  </div>
-  <div className="flex-none">
+  </article>
+  <article>
     ...
-  </div>
+  </article>
   ...
 </section>
 ```
 
-> Important: Parent `div` must have `display: flex` and `overflow-x: hidden | scroll` css styles
-
-- Step 2, import and assign ref to your `div element`.
+- Step 2, import and assign ref to your `div wrapper element`.
 
 ```javascript
 import useHorizontalScroll from "@revolt-digital/use-horizontal-scroll";
@@ -49,16 +46,16 @@ export default () => {
   const { ref } = useHorizontalScroll();
 
   return (
-    <section className="flex overflow-x-hidden" ref={ref}>
-      <div className="flex-none">
+    <section ref={ref}>
+      <article>
         ...
-      </div>
-      <div className="flex-none">
+      </article>
+      <article>
         ...
-      </div>
-      <div className="flex-none">
+      </article>
+      <article>
         ...
-      </div>
+      </article>
     </section>
   );
 }
